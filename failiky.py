@@ -239,6 +239,8 @@ def file2(textik):
 textf = file1(text_file)
 print(file2(textf))
 
+# test
+
 
 
 
