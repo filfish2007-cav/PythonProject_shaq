@@ -1,5 +1,5 @@
-def calc(num1, num2):
+def xil(num1, num2):
     return num1 + num2
 
 
-d = calc(1, 2)
+print(xil(2, 3))
