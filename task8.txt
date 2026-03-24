@@ -1,1 +1,1 @@
-Цей рядок змінено в newbranch, зараз буде бум
+Conflict is solved
