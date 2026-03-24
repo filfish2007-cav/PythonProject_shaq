@@ -1,4 +1,3 @@
-
 # # # HW 33-34!
 # # task 1
 # def count_digits(func):
@@ -97,5 +96,3 @@
 #
 # print("\nСписок унікальних елементів:")
 # print(result)
-
-

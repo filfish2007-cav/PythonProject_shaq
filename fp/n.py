@@ -7,16 +7,20 @@
 def pos_nums(numbers):
     return list(filter(lambda x: x > 0, numbers))
 
+
 data = [-10, 5, 0, 3, -2, 8]
 result = pos_nums(data)
 print(result)
 
-def three_mo(slova):
-    return list(filter(lambda x: len(x)>3, slova))
 
-slovechki = ["Adolf","jew"]
+def three_mo(slova):
+    return list(filter(lambda x: len(x) > 3, slova))
+
+
+slovechki = ["Adolf", "jew"]
 result = three_mo(slovechki)
 print(result)
+
 
 def poch_na(slova):
     def filter_by_letter(words, letter):

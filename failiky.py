@@ -214,21 +214,24 @@
 # print(remove_bad_words(deletables))
 
 
-
 text_file = input("Please enter the file text: ")
+
+
 def file1(textik):
-    with open("random.txt", "w",encoding="utf-8") as f:
+    with open("random.txt", "w", encoding="utf-8") as f:
         f.write(textik)
-    with open("random.txt", "r",encoding="utf-8") as f:
+    with open("random.txt", encoding="utf-8") as f:
         text = f.read()
 
     return text
+
+
 def file2(textik):
-    with open("random_stat.txt", "w",encoding="utf-8") as f:
+    with open("random_stat.txt", "w", encoding="utf-8") as f:
         length = len(textik)
         ryadki = textik.count("\n") + 1
         chisla = 0
-        golosni = ["a","e","u","i","o"]
+        golosni = ["a", "e", "u", "i", "o"]
         golosni_kil = 0
         for i in textik:
             if i.isdigit():
@@ -236,29 +239,11 @@ def file2(textik):
             elif i in golosni:
                 golosni_kil += 1
     return f"there are {ryadki} lines, there are {chisla} chisel, there are {golosni_kil} golosnyh"
+
+
 textf = file1(text_file)
 print(file2(textf))
 
 # test
 # second commend
 # test 3
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -66,15 +66,20 @@ group_monday = ["Артем", "Богдан"]
 group_tuesday = ["Віра", "Гліб", "Денис"]
 group_wednesday = ["Емма", "Женя", "Денис"]
 
-def perevirka(vsi,ponedilok,vivtorok,sereda):
+
+def perevirka(vsi, ponedilok, vivtorok, sereda):
     vsi = set(vsi)
     ponedilok = set(ponedilok)
     vivtorok = set(vivtorok)
     sereda = set(sereda)
 
-    print("Ti kogo zabyly: ", vsi-ponedilok-vivtorok-sereda)
-    print("To hto v dvoh grupah: ",ponedilok & vivtorok, ponedilok & sereda, sereda & vivtorok)
+    print("Ti kogo zabyly: ", vsi - ponedilok - vivtorok - sereda)
+    print(
+        "To hto v dvoh grupah: ",
+        ponedilok & vivtorok,
+        ponedilok & sereda,
+        sereda & vivtorok,
+    )
 
-perevirka(all_employees,group_monday,group_tuesday,group_wednesday)
 
-
+perevirka(all_employees, group_monday, group_tuesday, group_wednesday)

@@ -143,17 +143,19 @@ def info():
     full_info = dict(name=name, age=age, position=position)
     return full_info
 
+
 def add():
     slovnik = {}
     for _ in range(5):
         person_data = info()
         key_name = person_data["name"]
-        slovnik[key_name] = person_data["name"],person_data["age"],person_data["position"]
+        slovnik[key_name] = (
+            person_data["name"],
+            person_data["age"],
+            person_data["position"],
+        )
 
     return slovnik
+
+
 print(add())
-
-
-
-
-

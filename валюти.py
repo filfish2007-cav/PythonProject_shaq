@@ -73,8 +73,3 @@ vsi = office_workers | remote_workers
 both = office_workers & remote_workers
 vidsotok = (len(both) / len(vsi)) * 100
 print(f"all workers: {vsi} \n office and remote workers: {both} vidsotok: {vidsotok}")
-
-
-
-
-

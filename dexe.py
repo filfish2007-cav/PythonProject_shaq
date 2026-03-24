@@ -57,5 +57,6 @@ def is_palindrome(number):
     s = str(number)
     return s == s[::-1]
 
+
 print(is_palindrome(123321))  # True
 print(is_palindrome(421987))  # False

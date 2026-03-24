@@ -71,8 +71,3 @@
 # remote_workers = {"Іван", "Олена", "Дмитро", "Сергій", "Анна"}
 # vsi = office_workers | remote_workers
 # both = office_workers & remote_workers
-
-
-
-
-

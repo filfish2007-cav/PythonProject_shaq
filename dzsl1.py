@@ -21,8 +21,9 @@ bank_accounts = {
     "Марія": 2800.00,
     "Іван": 0.00,
     "Олена": 43500.75,
-    "Дмитро": -150.25  # борг
+    "Дмитро": -150.25,  # борг
 }
+
 
 def popovnennya(info):
     """
@@ -48,12 +49,13 @@ def popovnennya(info):
         # - якщо введено 'END' (в будь-якому регістрі)
         # - або введено порожній рядок
         if korystuvach.upper() == "END" or not korystuvach:
-            print("Thank you for using our bank, the balance has been succesfully updated!")
+            print(
+                "Thank you for using our bank, the balance has been succesfully updated!"
+            )
             break
 
         # Якщо користувач з таким ім'ям уже є в словнику рахунків
         elif korystuvach.lower().title() in info.keys():
-
             # Другий цикл — поки не буде введена коректна сума
             while True:
                 summa = int(input("Enter desired money transfer: "))
@@ -72,10 +74,8 @@ def popovnennya(info):
                     # print(f"Updated balance for {korystuvach.lower().title()}: {info[korystuvach.lower().title()]}")
                     break
 
-
         # Якщо користувача з таким ім'ям ще немає в словнику
         else:
-
             # Цикл для введення коректної суми для НОВОГО користувача
             while True:
                 summa = int(input("Enter desired money transfer: "))
@@ -89,24 +89,26 @@ def popovnennya(info):
                     # ключ — ім'я, значення — сума як початковий баланс
                     info.update({korystuvach.lower().title(): summa})
                     # self-check для перевірки додавання нового користувача
-                    print(f"New user added: {korystuvach.lower().title()} with balance {info[korystuvach.lower().title()]}")
+                    print(
+                        f"New user added: {korystuvach.lower().title()} with balance {info[korystuvach.lower().title()]}"
+                    )
                     break
 
 
 def withdrawal(info):
     """
-        Функція для зняття грошей з банківських рахунків користувачів.
+    Функція для зняття грошей з банківських рахунків користувачів.
 
-        Користувач вводить своє ім'я та суму зняття.
-        - Якщо таке ім'я вже є в словнику, баланс зменшується на введену суму.
-        - Якщо імені немає, виводить відповідне повідомлення.
-        - Вихід з циклу здійснюється, коли користувач вводить 'END' або порожній рядок.
+    Користувач вводить своє ім'я та суму зняття.
+    - Якщо таке ім'я вже є в словнику, баланс зменшується на введену суму.
+    - Якщо імені немає, виводить відповідне повідомлення.
+    - Вихід з циклу здійснюється, коли користувач вводить 'END' або порожній рядок.
 
-        :param info: словник, де ключ — ім'я користувача (str),
-            значення — баланс рахунку (float або int).
-            Приклад: {"Олексій": 15000.50, ...}
-        :return: нічого явно не повертає (None), але змінює словник info "на місці".
-        """
+    :param info: словник, де ключ — ім'я користувача (str),
+        значення — баланс рахунку (float або int).
+        Приклад: {"Олексій": 15000.50, ...}
+    :return: нічого явно не повертає (None), але змінює словник info "на місці".
+    """
 
     # Нескінченний цикл роботи з користувачем, поки він не завершить операцію
     while True:
@@ -122,7 +124,6 @@ def withdrawal(info):
 
         # Якщо користувач з таким ім'ям уже є в словнику рахунків
         elif korystuvach.lower().title() in info.keys():
-
             # Другий цикл — поки не буде введена коректна сума
             while True:
                 summa = int(input("Enter desired money withdrawal amount: "))
@@ -143,9 +144,12 @@ def withdrawal(info):
         else:
             print("No such user in database")
 
+
 def main():
     while True:
-        choice = input("Enter your choice of operation (withdrawal or transfer) (type END to end operation): ").strip()
+        choice = input(
+            "Enter your choice of operation (withdrawal or transfer) (type END to end operation): "
+        ).strip()
         if choice.upper() == "END" or not choice:
             print("Thanks for using our bank")
             break
@@ -153,8 +157,9 @@ def main():
             withdrawal(bank_accounts)
         elif choice.lower() == "transfer":
             popovnennya(bank_accounts)
-    print("Updated list of users in bank check if your operations been done \n {}".format(bank_accounts))
+    print(
+        f"Updated list of users in bank check if your operations been done \n {bank_accounts}"
+    )
+
 
 main()
-
-

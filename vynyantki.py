@@ -31,8 +31,9 @@ users_db = {
     "admin": "admin1234",
     "pasha_python": "qwerty2024",
     "olena_dev": "securePass77",
-    "guest": "12345"
+    "guest": "12345",
 }
+
 
 def login_password():
     login = input("input your login: ")

@@ -1,12 +1,17 @@
 import random
 
+
 def get_player_names():
     names = input("Input player names with spaces: ")
     spisok_hravciv = names.split()
     return spisok_hravciv
+
+
 def ask_truth_or_dare(player):
-    choice = input((f'{player} Truth or Dare? '))
+    choice = input(f"{player} Truth or Dare? ")
     return choice.lower()
+
+
 def ask_truth_question(player):
     truth_questions = [
         "What is the most embarrassing thing you've ever done?",
@@ -18,11 +23,13 @@ def ask_truth_question(player):
         "What is your biggest regret?",
         "Who is your secret crush?",
         "What is the worst gift you have ever received?",
-        "What is the most expensive thing you've ever broken?"
+        "What is the most expensive thing you've ever broken?",
     ]
     question = random.choice(truth_questions)
-    answer = input((f'{player}: {question} '))
+    answer = input(f"{player}: {question} ")
     return answer
+
+
 def perform_dare(player):
     dare_tasks = [
         "Do 20 push-ups right now.",
@@ -34,12 +41,16 @@ def perform_dare(player):
         "Try to touch your nose with your tongue.",
         "Let another player redo your hair however they want.",
         "Post a random picture from your gallery on your social media story.",
-        "Send a 'Hi' text to the 5th person in your recent messages."
+        "Send a 'Hi' text to the 5th person in your recent messages.",
     ]
     task = random.choice(dare_tasks)
-    answer = input((f'{player}: {task} '))
+    answer = input(f"{player}: {task} ")
     return answer
+
+
 playerz = get_player_names()
+
+
 def play_game(players):
     for player in players:
         choice = ask_truth_or_dare(player)
@@ -49,5 +60,6 @@ def play_game(players):
                 print("Ok u lost ")
         if choice.lower() == "truth":
             ask_truth_question(player)
-play_game(playerz)
 
+
+play_game(playerz)
